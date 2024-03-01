@@ -9,7 +9,7 @@ api_key = os.getenv('SERPAPI_KEY')
 client = serpapi.Client(api_key = api_key)
 
 start = 1
-input_product = "Big red apple"
+input_product = "bell pepper"
 q_inf = input_product + "grocery store"
 
 results = client.search({
