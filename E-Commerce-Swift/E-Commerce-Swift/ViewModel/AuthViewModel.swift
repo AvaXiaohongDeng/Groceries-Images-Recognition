@@ -16,7 +16,7 @@ protocol AuthenticationFormProtocol {
 @MainActor
 class AuthViewModel: ObservableObject {
     
-    /*@Published var userSession: FirebaseAuth.User?
+    @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
     
     init() {
@@ -67,5 +67,5 @@ class AuthViewModel: ObservableObject {
         self.currentUser = try? snapshot.data(as: User.self)
         
         print("Current user is: \(self.currentUser)")
-    }*/
+    }
 }

@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct DashboardView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
         
         NavigationStack {
@@ -19,12 +22,16 @@ struct DashboardView: View {
                     .padding(.vertical, 32)
                 VStack {
                     HStack(spacing: 30) {
-                        Text("Username")
+                        if let user = viewModel.currentUser {
+                            Text(user.fullname)
+                        }
                         
                         Text("Phone Number")
                     }
                     .padding()
-                    Text("Email Address")
+                    if let user = viewModel.currentUser {
+                        Text(user.email)
+                    }
                     
                     Spacer()
                     

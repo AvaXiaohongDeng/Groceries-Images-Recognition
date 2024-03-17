@@ -12,8 +12,9 @@ struct LoginView: View {
     @State private var email : String = ""
     @State private var password : String = ""
     @State private var showSignup = false
+    @State private var shouldNavigate = false
     
-    //@EnvironmentObject var viewModel: AuthViewModel
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         NavigationStack {
@@ -37,9 +38,10 @@ struct LoginView: View {
                 
                 Button(action: {
                     //login using FirebaseAuth
-//                    Task {
-//                        try await viewModel.signIn(withEmail: email, password: password)
-//                    }
+                    Task {
+                        try await viewModel.signIn(withEmail: email, password: password)
+                    }
+                    self.shouldNavigate = true
                 }){
                     HStack {
                         Text("Login")
@@ -53,6 +55,12 @@ struct LoginView: View {
                 .disabled(!formIsValid)
                 .opacity(formIsValid ? 1.0 : 0.5)
                 .cornerRadius(10)
+                .background(
+                    NavigationLink(destination: MainView(), isActive: $shouldNavigate) {
+                        EmptyView()
+                    }
+                    .hidden()
+                    )
                 .padding(.top, 24)
                 
                 Spacer()

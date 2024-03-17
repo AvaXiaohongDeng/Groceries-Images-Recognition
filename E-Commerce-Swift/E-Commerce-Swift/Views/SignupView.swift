@@ -47,9 +47,9 @@ struct SignupView: View {
                 
                 Button(action: {
                     //Sign up using FirebaseAuth
-//                    Task {
-//                        try await viewModel.signUp(withEmail: email, password: password, fullname: fullname)
-//                    }
+                    Task {
+                        try await viewModel.signUp(withEmail: email, password: password, fullname: fullname)
+                    }
                 }){
                     HStack {
                         Text("Create Account")

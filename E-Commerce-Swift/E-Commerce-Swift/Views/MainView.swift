@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @EnvironmentObject var viewModel : AuthViewModel
+    
     var body: some View {
         NavigationStack {
             VStack {
+                if let user = viewModel.currentUser {
+                    Text("Welcome \(user.fullname)!").font(.title)
+                }
                 
                 Image(systemName: "photo.on.rectangle.angled") // Placeholder for item picture
                     .resizable()
@@ -44,7 +50,7 @@ struct MainView: View {
             .padding(.bottom, 32) // Add padding at the bottom of the VStack
             .navigationBarTitle("Home", displayMode: .inline)
             .navigationBarItems(trailing:
-                                    NavigationLink(destination: DashboardView()) {
+                                    NavigationLink(destination: DashboardView().environmentObject(viewModel)) {
                 Text("Dashboard")
             }
             )

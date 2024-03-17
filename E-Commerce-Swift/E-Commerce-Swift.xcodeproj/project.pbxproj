@@ -44,7 +44,9 @@
 		FF80B1552B8FE02400575017 /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = FF80B1542B8FE02400575017 /* FirebaseInAppMessaging-Beta */; };
 		FF80B1572B8FE02400575017 /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = FF80B1562B8FE02400575017 /* FirebaseInAppMessagingSwift-Beta */; };
 		FF80B1592B8FE02400575017 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = FF80B1582B8FE02400575017 /* FirebaseInstallations */; };
-		FF80B15B2B8FE14F00575017 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF80B15A2B8FE14E00575017 /* GoogleService-Info.plist */; };
+		FFB14C712BA38B4C0082FFC6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB14C702BA38B4C0082FFC6 /* User.swift */; };
+		FFB14C732BA38D430082FFC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFB14C722BA38D430082FFC6 /* GoogleService-Info.plist */; };
+		FFCC7F9F2BA3A7C7009E48E6 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCC7F9E2BA3A7C7009E48E6 /* LaunchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,7 +60,9 @@
 		FF80B1182B8FDA5F00575017 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		FF80B11B2B8FDAD600575017 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		FF80B12E2B8FDFAD00575017 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
-		FF80B15A2B8FE14E00575017 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FFB14C702BA38B4C0082FFC6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FFB14C722BA38D430082FFC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FFCC7F9E2BA3A7C7009E48E6 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +107,7 @@
 		FF80B0F72B8FD8C800575017 = {
 			isa = PBXGroup;
 			children = (
-				FF80B15A2B8FE14E00575017 /* GoogleService-Info.plist */,
+				FFB14C722BA38D430082FFC6 /* GoogleService-Info.plist */,
 				FF80B1022B8FD8C900575017 /* E-Commerce-Swift */,
 				FF80B1012B8FD8C900575017 /* Products */,
 				FF80B1282B8FDF0F00575017 /* Frameworks */,
@@ -144,6 +148,7 @@
 		FF80B1112B8FD91000575017 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FFCC7F9E2BA3A7C7009E48E6 /* LaunchView.swift */,
 				FF80B1052B8FD8C900575017 /* MainView.swift */,
 				FF80B1142B8FD93300575017 /* LoginView.swift */,
 				FF80B1162B8FD93C00575017 /* SignupView.swift */,
@@ -155,6 +160,7 @@
 		FF80B1122B8FD91800575017 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FFB14C702BA38B4C0082FFC6 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -282,7 +288,7 @@
 			files = (
 				FF80B10B2B8FD8C900575017 /* Preview Assets.xcassets in Resources */,
 				FF80B1082B8FD8C900575017 /* Assets.xcassets in Resources */,
-				FF80B15B2B8FE14F00575017 /* GoogleService-Info.plist in Resources */,
+				FFB14C732BA38D430082FFC6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,12 +299,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFB14C712BA38B4C0082FFC6 /* User.swift in Sources */,
 				FF80B1172B8FD93C00575017 /* SignupView.swift in Sources */,
 				FF80B1152B8FD93300575017 /* LoginView.swift in Sources */,
 				FF80B1192B8FDA5F00575017 /* DashboardView.swift in Sources */,
 				FF80B12F2B8FDFAD00575017 /* AuthViewModel.swift in Sources */,
 				FF80B11C2B8FDAD600575017 /* InputView.swift in Sources */,
 				FF80B1062B8FD8C900575017 /* MainView.swift in Sources */,
+				FFCC7F9F2BA3A7C7009E48E6 /* LaunchView.swift in Sources */,
 				FF80B1042B8FD8C900575017 /* E_Commerce_SwiftApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,7 +366,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -415,7 +423,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
