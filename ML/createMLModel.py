@@ -15,11 +15,19 @@ import warnings
 warnings.filterwarnings('ignore')
 from keras.preprocessing import image
 
-#load dataset
-train_path = "C:/Users/Admin/python/S6SoftwareEngineer/E_Commerce_Recognition/ML/dataset/train"
-test_path = "C:/Users/Admin/python/S6SoftwareEngineer/E_Commerce_Recognition/ML/dataset/test"
-val_path = "C:/Users/Admin/python/S6SoftwareEngineer/E_Commerce_Recognition/ML/dataset/validation"
-image_category =os.listdir("C:/Users/Admin/python/S6SoftwareEngineer/E_Commerce_Recognition/ML/dataset/train")
+#get current working directory
+current_dir = os.getcwd()
+
+#paths
+# train_path = "C:/Users/Admin/python/S6SoftwareEngineer/E_Commerce_Recognition/ML/dataset/train"
+# test_path = "C:/Users/Admin/python/S6SoftwareEngineer/E_Commerce_Recognition/ML/dataset/test"
+# val_path = "C:/Users/Admin/python/S6SoftwareEngineer/E_Commerce_Recognition/ML/dataset/validation"
+# image_category =os.listdir("C:/Users/Admin/python/S6SoftwareEngineer/E_Commerce_Recognition/ML/dataset/train")
+dataset_dir = os.path.join(current_dir, "ML/dataset")
+train_path = os.path.join(dataset_dir, "train")
+test_path = os.path.join(dataset_dir, "test")
+val_path = os.path.join(dataset_dir, "validation")
+image_category = os.listdir(train_path)
 
 # #plot the dataset
 # def plot_image (image_category):
@@ -213,7 +221,9 @@ class_map = dict([v,k] for k,v in train_image_generator.class_indices.items())
 print(class_map)
 
 import numpy as np
-test_image_path ="C:/Users/Admin/python/S6SoftwareEngineer/E_Commerce_Recognition/ML/dataset/Image_1.jpg"
+# test_image_path ="C:/Users/Admin/python/S6SoftwareEngineer/E_Commerce_Recognition/ML/dataset/Image_1.jpg"
+test_image_path = os.path.join(dataset_dir, "Image_1.jpg")
+
 def predictions(test_image_path):
 
     #load and preprocessing image
